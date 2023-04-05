@@ -2,7 +2,7 @@
 
     function index () {
         render("pages/index", [
-            "title" => "The Resource Application"
+            "title" => "Restaraunt Reservations Website"
         ]);
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-    function connect(string $host, string $database, string $username, string $password, int $port = 3308): PDO {
+    function connect(string $host, string $database, string $username, string $password, int $port = 8889): PDO {
         try {
             $dsn = "mysql:host={$host};port={$port};dbname={$database}";
 
