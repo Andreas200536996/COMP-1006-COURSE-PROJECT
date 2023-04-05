@@ -22,9 +22,9 @@
         $restaurants = RestaurantModel::findALl();
 
         render("reservations/new", [
-            "title" => "New",
+            "title" => "New Reservation",
             "action" => "create",
-            "restaurant" => ($restaurants ?? [])
+            "restaurants" => ($restaurants ?? [])
         ]);
     }
 
@@ -67,7 +67,7 @@
     }
 
     function validate ($package, $error_redirect_path) {
-        $fields = ["parent_id", "customer_name", "reservation_time", "reservation_date"];
+        $fields = ["parent_id", "customer_name", "reservation_date"];
         $errors = [];
 
         // No empty fields
