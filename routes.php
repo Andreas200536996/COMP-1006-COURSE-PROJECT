@@ -15,28 +15,28 @@
                 "action" => "index"
             ],
             [
-                "pattern" => "/resources",
-                "controller" => "ResourcesController",
+                "pattern" => "/restaurants",
+                "controller" => "RestaurantsController",
                 "action" => "index"
             ],
             [
-                "pattern" => "/resources/new",
-                "controller" => "ResourcesController",
+                "pattern" => "/restaurants/new",
+                "controller" => "RestaurantsController",
                 "action" => "_new"
             ],
             [
-                "pattern" => "/resources/:id",
-                "controller" => "ResourcesController",
+                "pattern" => "/restaurants/:id",
+                "controller" => "RestaurantsController",
                 "action" => "show"
             ],
             [
-                "pattern" => "/resources/edit/:id",
-                "controller" => "ResourcesController",
+                "pattern" => "/restaurants/edit/:id",
+                "controller" => "RestaurantsController",
                 "action" => "edit"
             ],
             [
-                "pattern" => "/resources/delete/:id",
-                "controller" => "ResourcesController",
+                "pattern" => "/restaurants/delete/:id",
+                "controller" => "RestaurantsController",
                 "action" => "delete"
             ],
             [
@@ -57,13 +57,13 @@
         ],
         "post" => [
             [
-                "pattern" => "/resources/create",
-                "controller" => "ResourcesController",
+                "pattern" => "/restaurants/create",
+                "controller" => "RestaurantsController",
                 "action" => "create"
             ],
             [
-                "pattern" => "/resources/update",
-                "controller" => "ResourcesController",
+                "pattern" => "/restaurants/update",
+                "controller" => "RestaurantsController",
                 "action" => "update"
             ],
             [
