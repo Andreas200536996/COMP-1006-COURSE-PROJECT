@@ -18,7 +18,6 @@ CREATE TABLE restaurant_reservations (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     parent_id INT NOT NULL,
     customer_name varchar(50) not null,
-    reservation_time time not null,
     reservation_date date not null,
-    FOREIGN KEY (parent_id) REFERENCES parent_resource (id) ON DELETE CASCADE
+    FOREIGN KEY (parent_id) REFERENCES restaurant (id) ON DELETE CASCADE
 );

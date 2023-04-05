@@ -59,12 +59,23 @@
                     <?php if ($auth): ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Resources
+                                Restaurants
                             </a>
 
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="<?= ROOT_PATH ?>/resources/new">New</a></li>
-                                <li><a class="dropdown-item" href="<?= ROOT_PATH ?>/resources">List</a></li>
+                                <li><a class="dropdown-item" href="<?= ROOT_PATH ?>/restaurants/new">New</a></li>
+                                <li><a class="dropdown-item" href="<?= ROOT_PATH ?>/restaurants">List</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Reservations
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="<?= ROOT_PATH ?>/reservations/new">New</a></li>
+                                <li><a class="dropdown-item" href="<?= ROOT_PATH ?>/rreservations">List</a></li>
                             </ul>
                         </li>
 

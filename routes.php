@@ -39,6 +39,33 @@
                 "controller" => "RestaurantsController",
                 "action" => "delete"
             ],
+
+            [
+                "pattern" => "/reservations",
+                "controller" => "ReservationsController",
+                "action" => "index"
+            ],
+            [
+                "pattern" => "/reservations/new",
+                "controller" => "ReservationsController",
+                "action" => "_new"
+            ],
+            [
+                "pattern" => "/reservations/:id",
+                "controller" => "ReservationsController",
+                "action" => "show"
+            ],
+            [
+                "pattern" => "/reservations/edit/:id",
+                "controller" => "ReservationsController",
+                "action" => "edit"
+            ],
+            [
+                "pattern" => "/reservations/delete/:id",
+                "controller" => "ReservationsController",
+                "action" => "delete"
+            ],
+
             [
                 "pattern" => "/users/new",
                 "controller" => "UsersController",
@@ -66,6 +93,18 @@
                 "controller" => "RestaurantsController",
                 "action" => "update"
             ],
+
+            [
+                "pattern" => "/reservations/create",
+                "controller" => "ReservationsController",
+                "action" => "create"
+            ],
+            [
+                "pattern" => "/reservations/update",
+                "controller" => "ReservationsController",
+                "action" => "update"
+            ],
+
             [
                 "pattern" => "/users/create",
                 "controller" => "UsersController",

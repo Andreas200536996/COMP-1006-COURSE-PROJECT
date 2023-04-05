@@ -1,44 +1,53 @@
 <?php
 
-    class RestaurantModel {
+    class ReservationModel {
 
-        private static $_table = "restaurant";
+        private static $_table = "restaurant_reservations";
 
         public static function findAll () {
             $table = self::$_table;
             $conn = get_connection();
             $sql = "SELECT * FROM {$table}";
 
-            $restaurants = $conn->query($sql)->fetchAll(PDO::FETCH_OBJ);
+            $reservations = $conn->query($sql)->fetchAll(PDO::FETCH_OBJ);
             $conn = null;
-            return $restaurants;
+            return $reservations;
         }
 
         public static function find ($id) {
             $table = self::$_table;
             $conn = get_connection();
-            $sql = "SELECT * FROM {$table} WHERE id = :id";
+            $sql = "SELECT restaurant_reservations.id, parent_id, customer_name, reservation_date, restaurant.restaurant_name as restaurant 
+            FROM {$table} 
+            JOIN restaurant ON restaurant_reservations.parent_id = restaurant.id
+            WHERE restaurant_reservations.id = :id";
 
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(":id", $id, PDO::PARAM_INT);
             $stmt->execute();
 
-            $restaurant = $stmt->fetch(PDO::FETCH_OBJ);
+            $reservation = $stmt->fetch(PDO::FETCH_OBJ);
             $conn = null;
-            return $restaurant;
+            return $reservation;
         }
 
         public static function create ($package) {
             $table = self::$_table;
             $conn = get_connection();
             $sql = "INSERT INTO {$table} (
-                restaurant_name
+                parent_id,
+                customer_name,
+                reservation_date
             ) VALUES (
-                :restaurant_name
+                :parent_id,
+                :customer_name,
+                :reservation_date
             )";
 
             $stmt = $conn->prepare($sql);
-            $stmt->bindParam(":restaurant_name", $package["restaurant_name"], PDO::PARAM_STR);
+            $stmt->bindParam(":parent_id", $package["parent_id"], PDO::PARAM_INT);
+            $stmt->bindParam(":customer_id", $package["customer_id"], PDO::PARAM_STR);
+            $stmt->bindParam(":reservation_date", $package["reservation_date"], PDO::PARAM_STR);
             $stmt->execute();
             $conn = null;
         }
@@ -47,11 +56,15 @@
             $table = self::$_table;
             $conn = get_connection();
             $sql = "UPDATE {$table} SET
-                restaurant_name = :restaurant_name
+                parent_id = :parent_id,
+                customer_name = :customer_name,
+                reservation_date = :reservation_date
             WHERE id = :id";
 
             $stmt = $conn->prepare($sql);
-            $stmt->bindParam(":restaurant_name", $package['restaurant_name'], PDO::PARAM_STR);
+            $stmt->bindParam(":parent_id", $package['parent_id'], PDO::PARAM_INT);
+            $stmt->bindParam(":customer_name", $package['customer_name'], PDO::PARAM_STR);
+            $stmt->bindParam(":reservation_date", $package['reservation_date'], PDO::PARAM_STR);
             $stmt->bindParam(":id", $package['id'], PDO::PARAM_INT);
             
             $stmt->execute();
