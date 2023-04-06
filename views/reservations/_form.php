@@ -35,8 +35,8 @@
     </div>
 
     <div class="form-group my-3">
-        <label for="reservation_time">Date of Reservation</label>
-        <input class="form-control" type="datetime-local" name="reservation_time" value="<?= $form_fields["reservation_time"] ?? "" ?>">
+        <label for="reservation_date">Date of Reservation</label>
+        <input class="form-control" type="datetime-local" name="reservation_date" value="<?= $form_fields["reservation_date"] ?? "" ?>">
     </div>
 
 

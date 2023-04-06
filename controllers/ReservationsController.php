@@ -7,7 +7,7 @@
         $reservations = ReservationModel::findAll();
 
         render("reservations/index", [
-            "restaurant_reservations" => $reservations,
+            "reservations" => $reservations,
             "title" => "Reservations"
         ]);
     }
@@ -78,7 +78,8 @@
             }
         }
 
-        if (strtotime($package["reservations_date"]) < strtotime("now")) {
+
+        if (strtotime($package["reservation_date"]) < strtotime("now")) {
             $errors[]= "Reservation Date must be in the future";
         }
 

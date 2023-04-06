@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Available Restaurants</h1>
+    <h1>Reservations</h1>
 
     <?php if (isset($restaurants) && count($restaurants) > 0): ?>
     <table class="table table-striped table-bordered">

@@ -75,7 +75,7 @@
 
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="<?= ROOT_PATH ?>/reservations/new">New</a></li>
-                                <li><a class="dropdown-item" href="<?= ROOT_PATH ?>/rreservations">List</a></li>
+                                <li><a class="dropdown-item" href="<?= ROOT_PATH ?>/reservations">List</a></li>
                             </ul>
                         </li>
 

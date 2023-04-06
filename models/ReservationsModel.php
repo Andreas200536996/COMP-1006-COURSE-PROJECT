@@ -46,7 +46,7 @@
 
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(":parent_id", $package["parent_id"], PDO::PARAM_INT);
-            $stmt->bindParam(":customer_id", $package["customer_id"], PDO::PARAM_STR);
+            $stmt->bindParam(":customer_name", $package["customer_name"], PDO::PARAM_STR);
             $stmt->bindParam(":reservation_date", $package["reservation_date"], PDO::PARAM_STR);
             $stmt->execute();
             $conn = null;
