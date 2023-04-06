@@ -6,4 +6,10 @@
         ]);
     }
 
+    function about () {
+        render("pages/about", [
+            "title" => "About the Website"
+        ]);
+    }
+
 ?>

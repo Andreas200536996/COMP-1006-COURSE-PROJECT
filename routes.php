@@ -15,6 +15,11 @@
                 "action" => "index"
             ],
             [
+                "pattern" => "/about",
+                "controller" => "PagesController",
+                "action" => "about"
+            ],
+            [
                 "pattern" => "/restaurants",
                 "controller" => "RestaurantsController",
                 "action" => "index"
