@@ -90,6 +90,8 @@
         }
     }
 
-    function sanitize($package) {}
+    function sanitize($package) {
+        $package["restaurant_name"] = htmlspecialchars($package["restaurant_name"]);
+    }
 
 ?>

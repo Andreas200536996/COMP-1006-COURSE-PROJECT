@@ -104,6 +104,9 @@
         }
     }
 
-    function sanitize($package) {}
+    function sanitize($package) {
+        $package["customer_name"] = htmlspecialchars($package["customer_name"]);
+        $package["reservation_date"] = date('Y-m-d H:i:s', strtotime($package["reservation_date"]));
+    }
 
 ?>
