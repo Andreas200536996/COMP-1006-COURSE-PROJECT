@@ -36,7 +36,7 @@
 
         render("restaurants/edit", [
             "title" => "Edit",
-            "restaurants" => $restaurant,
+            "restaurant" => $restaurant,
             "edit_mode" => true,
             "action" => "update"
         ]);

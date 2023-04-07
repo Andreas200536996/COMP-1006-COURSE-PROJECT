@@ -42,7 +42,7 @@
 
         render("reservations/edit", [
             "title" => "Edit",
-            "reservations" => $reservation,
+            "reservation" => $reservation,
             "edit_mode" => true,
             "restaurants" => ($restaurants ?? []),
             "action" => "update"
