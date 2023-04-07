@@ -5,7 +5,7 @@
     <table class="table table-striped table-bordered">
         <thead>
             <tr>
-                <th>Name</th>
+                <th>Restaurant Name</th>
                 <th>Actions</th>
             </tr>
         </thead>

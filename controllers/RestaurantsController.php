@@ -6,7 +6,7 @@
         $restaurants = RestaurantModel::findAll();
 
         render("restaurants/index", [
-            "restaurant" => $restaurants,
+            "restaurants" => $restaurants,
             "title" => "Index"
         ]);
     }
@@ -36,7 +36,7 @@
 
         render("restaurants/edit", [
             "title" => "Edit",
-            "restaurant" => $restaurant,
+            "restaurants" => $restaurant,
             "edit_mode" => true,
             "action" => "update"
         ]);

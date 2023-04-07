@@ -29,8 +29,22 @@
     }
 
     function edit ($request) {
+        if (!isset($request["params"]["id"])) {
+            return redirect("", ["errors" => "Missing required ID parameter"]);
+        }
+
+        $reservation = ReservationModel::find($request["params"]["id"]);
+        if (!$reservation) {
+            return redirect("", ["errors" => "Reservation does not exist"]);
+        }
+
+        $restaurants = RestaurantModel::findAll();
+
         render("reservations/edit", [
             "title" => "Edit",
+            "reservations" => $reservation,
+            "edit_mode" => true,
+            "restaurants" => ($restaurants ?? []),
             "action" => "update"
         ]);
     }

@@ -6,22 +6,19 @@
 <?php if ($restaurants && count($restaurants) > 0): ?>
 <form action="<?= ROOT_PATH ?>/reservations/<?= $action ?>" method="post">
 <?php if ($action === "update"): ?>
-        <input type="hidden" name="id" value="<?= $form_fields["id"] ?>">
+        <input type="hidden" name="id" value="<?= $form_fields["id"]?>">
+        
     <?php endif ?>
 
     <div class="form-group my-3">
-        <label for="status_id">Restaurant Number</label>
+        <label for="status_id">Restaurant</label>
         <select class="form-select" name="parent_id" >
-            <option value="" selected>Enter the corresponding number of the restaurant you wish to reserve at.</option>
+            <option value="" selected>Select the restaurant you wish to reserve at.</option>
             <?php foreach ($restaurants as $restaurant): ?>
                 <?php 
                     $selected = (isset($form_fields["parent_id"]) && $form_fields
                     ["parent_id"] == $restaurant->id) ? "selected" : "";
                 ?>
-
-
-
-
                 <option value="<?= $restaurant->id ?>" <?= $selected ?>>
                     <?= $restaurant->restaurant_name ?>
                 </option>

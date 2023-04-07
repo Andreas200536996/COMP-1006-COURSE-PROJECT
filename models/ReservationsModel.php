@@ -7,7 +7,10 @@
         public static function findAll () {
             $table = self::$_table;
             $conn = get_connection();
-            $sql = "SELECT * FROM {$table}";
+            $sql = "SELECT restaurant_reservations.id, parent_id, customer_name, reservation_date, restaurant.restaurant_name as restaurant
+            FROM {$table}
+            JOIN restaurant ON restaurant_reservations.parent_id = restaurant.id
+            WHERE restaurant_reservations.parent_id = restaurant.id";
 
             $reservations = $conn->query($sql)->fetchAll(PDO::FETCH_OBJ);
             $conn = null;
