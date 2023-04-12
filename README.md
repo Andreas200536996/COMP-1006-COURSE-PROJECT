@@ -1,4 +1,4 @@
 # COMP-1006-COURSE-PROJECT
 Group Members:
-Regan Rebidoux
+Reegan James Rebidoux
 Andreas Sofijanov
