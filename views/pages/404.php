@@ -1,1 +1,3 @@
-<h1>404 Not Found</h1>
+<div id="error">
+    <h1>404 ERROR: Page Not Found</h1> <br>
+</div>

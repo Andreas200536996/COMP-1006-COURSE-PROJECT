@@ -47,7 +47,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="<?= ROOT_PATH ?>">
-                The Restaurant Reservation Website!
+                Reservation Nation
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -105,9 +105,16 @@
             </div>
         </div>
     </nav>
-
     <!-- View specific output -->
     <?= $yield ?? null ?>
+    <footer id="footer">
+        <address>
+            Reservation Nation <br>
+            77, Georgian Dr,<br>
+            Barrie, ON L4M 3X9<br>
+            <small>Copyright &copy; 2023 Andreas Sofijanov / RJ Rebidoux / Phil Cloutier </small>
+        </address>
+    </footer>
 </body>
 
 </html>
