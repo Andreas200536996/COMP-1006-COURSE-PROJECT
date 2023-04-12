@@ -61,6 +61,10 @@
                             <a class="nav-link" href="<?= ROOT_PATH ?>/about">About</a>
                         </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= ROOT_PATH ?>/pages/contact">Contact Us</a>
+                        </li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Restaurants
@@ -92,6 +96,10 @@
                         </li>
 
                         <li class="nav-item">
+                            <a class="nav-link" href="<?= ROOT_PATH ?>/contact">Contact Us</a>
+                        </li>
+
+                        <li class="nav-item">
                             <a class="nav-link" href="<?= ROOT_PATH ?>/users/new">Register</a>
                         </li>
 
@@ -105,8 +113,10 @@
             </div>
         </div>
     </nav>
+
     <!-- View specific output -->
     <?= $yield ?? null ?>
+
     <footer id="footer">
         <address>
             Reservation Nation <br>

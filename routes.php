@@ -1,11 +1,5 @@
 <?php
 
-    /**
-     * Routes are responsible for matching a requested path
-     * with a controller and an action. The controller represents
-     * a collection of functions you want associated, usually, with
-     * a resource. The action is the specific function you want to call.
-     */
 
     $routes = [
         "get" => [
@@ -18,6 +12,11 @@
                 "pattern" => "/about",
                 "controller" => "PagesController",
                 "action" => "about"
+            ],
+            [
+                "pattern" => "/pages/contact",
+                "controller" => "ContactController",
+                "action" => "_new"
             ],
             [
                 "pattern" => "/restaurants",
@@ -120,6 +119,11 @@
                 "controller" => "UsersController",
                 "action" => "authenticate"
             ],
+            [
+                "pattern" => "/contact/create",
+                "controller" => "ContactController",
+                "action" => "create"
+            ]
         ]
     ];
 

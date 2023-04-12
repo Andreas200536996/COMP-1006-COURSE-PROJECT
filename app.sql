@@ -21,3 +21,10 @@ CREATE TABLE restaurant_reservations (
     reservation_date date not null,
     FOREIGN KEY (parent_id) REFERENCES restaurant (id) ON DELETE CASCADE
 );
+
+CREATE TABLE contact_info (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name varchar(50) not null,
+    email varchar(50) not null,
+    question varchar(2000) not null
+);

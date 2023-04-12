@@ -77,7 +77,6 @@
         $fields = ["restaurant_name"];
         $errors = [];
 
-        // No empty fields
         foreach ($fields as $field) {
             if (empty($package[$field])) {
                 $humanize = ucwords(str_replace("_", " ", $field));
