@@ -122,7 +122,7 @@
             Reservation Nation <br>
             77, Georgian Dr,<br>
             Barrie, ON L4M 3X9<br>
-            <small>Copyright &copy; 2023 Andreas Sofijanov / RJ Rebidoux / Phil Cloutier </small>
+            <small>Copyright &copy; 2023 Andreas Sofijanov / RJ Rebidoux </small>
         </address>
     </footer>
 </body>
